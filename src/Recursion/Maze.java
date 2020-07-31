@@ -46,6 +46,7 @@ public class Maze {
 				System.out.print(maze[i][j]);
 			}System.out.println();
 		}
+		
 	}
 
 }
