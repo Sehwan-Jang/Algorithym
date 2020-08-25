@@ -13,6 +13,7 @@ public class BlobCount {
 			{0,1,1,0,0,1,1,1}
 	};
 	
+	@SuppressWarnings("unused")
 	private static int BLANK_COLOR = 0;
 	private static int IMAGE_COLOR = 1;
 	private static int COUNTED_COLOR = 2;
