@@ -31,7 +31,7 @@ public class QuickSort {
 
 	public static void main(String[] args) {
 
-		int[] qs = {31,8,48,73,11,3,20,29,65,15};
+		int[] qs = {31,8,31,73,11,3,20,29,65,15};
 		quickSort(qs, 0, 9);
 		for (int i = 0; i < qs.length; i++) {
 			System.out.print(qs[i] + " ");
