@@ -9,22 +9,22 @@ public class HeapSortTest {
 		return false;
 	}
 
-	public static void max_Heapify(int[] arr, int index, int length) {
-		while (hasChild(arr, index, length)) {
+	public static void max_Heapify(int[] arr, int root, int length) {
+		while (hasChild(arr, root, length)) {
 			int k;
-			if (length - 1 >= index * 2 + 2) {
-				k = (arr[2 * index + 1] > arr[2 * index + 2]) ? 2 * index + 1 : 2 * index + 2;
+			if (length - 1 >= root * 2 + 2) {
+				k = (arr[2 * root + 1] > arr[2 * root + 2]) ? 2 * root + 1 : 2 * root + 2;
 			} else {
-				k = index * 2 + 1;
+				k = root * 2 + 1;
 			}
 
-			if (arr[index] >= arr[k]) {
+			if (arr[root] >= arr[k]) {
 				return;
 			}
-			int tmp = arr[index];
-			arr[index] = arr[k];
+			int tmp = arr[root];
+			arr[root] = arr[k];
 			arr[k] = tmp;
-			index = k;
+			root = k;
 		}
 	}
 
@@ -48,7 +48,7 @@ public class HeapSortTest {
 
 	public static void main(String[] args) {
 
-		int[] arr = { 230, 10, 60, 550, 40, 220, 20 };
+		int[] arr = { 230, 10, 60, 70, 13};
 		heapSort(arr);
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + "  ");
